@@ -2,27 +2,37 @@ import math
 
 
 def add(x, y):
-    return float(x + y)
+    x = float(x)
+    y = float(y)
+    return x + y
 
 
 def subtract(x, y):
-    return float(x - y)
+    x = float(x)
+    y = float(y)
+    return x - y
 
 
 def multiply(x, y):
-    return float(x * y)
+    x = float(x)
+    y = float(y)
+    return x * y
 
 
 def divide(x, y):
-    return round(float(x / y), 9)
+    x = float(x)
+    y = float(y)
+    return round((x / y), 9)
 
 
 def square(x):
-    return round(float(x * x), 9)
+    x = float(x)
+    return round((x * x), 9)
 
 
 def sqrt(x):
-    return float(math.sqrt(x))
+    x = float(x)
+    return (math.sqrt(x))
 
 
 class Calculator:
