@@ -1,23 +1,28 @@
 import math
 
+
 def add(x, y):
     return float(x + y)
+
 
 def subtract(x, y):
     return float(x - y)
 
+
 def multiply(x, y):
     return float(x * y)
+
 
 def divide(x, y):
     return float(x / y)
 
+
 def square(x):
     return float(x * x)
 
+
 def sqrt(x):
     return float(math.sqrt(x))
-
 
 
 class Calculator:
@@ -32,4 +37,8 @@ class Calculator:
 
     def subtract(self, x, y):
         self.result = subtract(x, y)
+        return self.result
+
+    def multiply(self, x, y):
+        self.result = multiply(x, y)
         return self.result

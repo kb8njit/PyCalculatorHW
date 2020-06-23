@@ -18,7 +18,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.subtract(4.4, 2.2), 2.2)
         self.assertEqual(self.calculator.result, 2.2)
 
-
+    def test_multiply(self):
+        self.assertEqual(self.calculator.multiply(2.1, 2.1), 4.41)
+        self.assertEqual(self.calculator.result, 4.41)
 
 
 if __name__ == '__main__':
