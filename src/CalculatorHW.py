@@ -30,3 +30,6 @@ class Calculator:
         self.result = add(x, y)
         return self.result
 
+    def subtract(self, x, y):
+        self.result = subtract(x, y)
+        return self.result
