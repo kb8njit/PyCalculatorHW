@@ -22,11 +22,11 @@ class MyTestCase(unittest.TestCase):
         test_data.clear()
 
     def test_subtraction(self):
-        self.assertEqual(self.calculator.subtract(4.4, 2.2), 2.2)
+        self.assertEqual(self.calculator.subtract(2.2, 4.4), 2.2)
         self.assertEqual(self.calculator.result, 2.2)
         test_data = CSVReader('/src/CSV_files/Subtraction.csv').data
         for row in test_data:
-            self.assertEqual(self.calculator.subtract(row['Value 2'], row['Value 1']), int(row['Result']))
+            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
         test_data.clear()
 
@@ -48,14 +48,18 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 4.84)
         test_data = CSVReader('/src/CSV_files/Square.csv').data
         for row in test_data:
-            self.assertEqual(self.calculator.square(row['Value 1']), float(row['Result']))
-            self.assertEqual(self.calculator.result, round(float(row['Result']), 9))
+            self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
         test_data.clear()
 
     def test_sqrt(self):
-        self.assertEqual(self.calculator.sqrt(8.8), float(math.sqrt(8.8)))
-        self.assertEqual(self.calculator.result, float(math.sqrt(8.8)))
-
+        self.assertEqual(self.calculator.sqrt(8.8), round(float(math.sqrt(8.8)), 9))
+        self.assertEqual(self.calculator.result, round(float(math.sqrt(8.8)), 9))
+        test_data = CSVReader('src/CSV_files/SquareRoot.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.sqrt(int(row['Value 1'])), round(float(row['Result']), 9))
+            self.assertEqual(self.calculator.result, round(float(row['Result']), 9))
+        test_data.clear()
 
 if __name__ == '__main__':
     unittest.main()

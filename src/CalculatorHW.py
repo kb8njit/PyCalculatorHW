@@ -10,7 +10,7 @@ def add(x, y):
 def subtract(x, y):
     x = float(x)
     y = float(y)
-    return x - y
+    return y - x
 
 
 def multiply(x, y):
@@ -32,7 +32,7 @@ def square(x):
 
 def sqrt(x):
     x = float(x)
-    return (math.sqrt(x))
+    return round(math.sqrt(x), 9)
 
 
 class Calculator:
