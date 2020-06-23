@@ -1,4 +1,5 @@
 import unittest
+import math
 from CalculatorHW import Calculator
 
 
@@ -30,7 +31,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.square(2.2), 4.84)
         self.assertEqual(self.calculator.result, 4.84)
 
-
+    def test_sqrt(self):
+        self.assertEqual(self.calculator.sqrt(8.8), float(math.sqrt(8.8)))
+        self.assertEqual(self.calculator.result, float(math.sqrt(8.8)))
 
 if __name__ == '__main__':
     unittest.main()

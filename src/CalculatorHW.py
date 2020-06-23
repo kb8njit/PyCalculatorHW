@@ -22,7 +22,7 @@ def square(x):
 
 
 def sqrt(x):
-    return round(float(math.sqrt(x), 9))
+    return float(math.sqrt(x))
 
 
 class Calculator:
@@ -49,4 +49,8 @@ class Calculator:
 
     def square(self, x):
         self.result = square(x)
+        return self.result
+
+    def sqrt(self, x):
+        self.result = sqrt(x)
         return self.result
