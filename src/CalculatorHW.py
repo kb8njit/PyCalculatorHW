@@ -14,15 +14,15 @@ def multiply(x, y):
 
 
 def divide(x, y):
-    return float(x / y)
+    return round(float(x / y), 9)
 
 
 def square(x):
-    return float(x * x)
+    return round(float(x * x), 9)
 
 
 def sqrt(x):
-    return float(math.sqrt(x))
+    return round(float(math.sqrt(x), 9))
 
 
 class Calculator:
@@ -45,4 +45,8 @@ class Calculator:
 
     def divide(self, x, y):
         self.result = divide(x, y)
+        return self.result
+
+    def square(self, x):
+        self.result = square(x)
         return self.result
