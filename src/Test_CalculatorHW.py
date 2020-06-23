@@ -34,6 +34,13 @@ class MyTestCase(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(self.calculator.multiply(2.1, 2.1), 4.41)
         self.assertEqual(self.calculator.result, 4.41)
+        test_data = CSVReader('/src/CSV_files/Multiplication.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.multiply(int(row['Value 1']), int(row['Value 2'])), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+        test_data.clear()
+
+
 
     def test_division(self):
         self.assertEqual(self.calculator.divide(6.0, 2.0), 3.0)
