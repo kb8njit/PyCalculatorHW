@@ -42,3 +42,7 @@ class Calculator:
     def multiply(self, x, y):
         self.result = multiply(x, y)
         return self.result
+
+    def divide(self, x, y):
+        self.result = divide(x, y)
+        return self.result
