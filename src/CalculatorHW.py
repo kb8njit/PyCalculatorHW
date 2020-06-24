@@ -8,25 +8,25 @@ def add(x, y):
 
 
 def subtract(x, y):
-    x = float(x)
-    y = float(y)
+    x = int(x)
+    y = int(y)
     return y - x
 
 
 def multiply(x, y):
-    x = float(x)
-    y = float(y)
+    x = int(x)
+    y = int(y)
     return x * y
 
 
 def divide(x, y):
-    x = float(x)
-    y = float(y)
-    return round((x / y), 9)
+    x = int(x)
+    y = int(y)
+    return round((y / x), 9)
 
 
 def square(x):
-    x = float(x)
+    x = int(x)
     return round((x * x), 9)
 
 
