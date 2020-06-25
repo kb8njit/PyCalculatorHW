@@ -32,7 +32,7 @@ def square(x):
 
 def sqrt(x):
     x = float(x)
-    return round(math.sqrt(x), 9)
+    return round(math.sqrt(x), 8)
 
 
 class Calculator:
